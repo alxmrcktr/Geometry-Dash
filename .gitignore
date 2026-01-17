@@ -7,7 +7,7 @@ export_presets.cfg
 
 # Windows executable (keep only web version)
 *.exe
-*.pck
+game/*.pck
 
 # Imported resources
 *.import
