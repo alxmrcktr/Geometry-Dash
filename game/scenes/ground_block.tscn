@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://ground123"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(40, 40)
+
+[node name="GroundBlock" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="BlockBody" type="Polygon2D" parent="."]
+color = Color(0.05, 0.1, 0.2, 1)
+polygon = PackedVector2Array(-20, -20, 20, -20, 20, 20, -20, 20)
+
+[node name="BlockOutline" type="Line2D" parent="."]
+points = PackedVector2Array(-20, -20, 20, -20, 20, 20, -20, 20, -20, -20)
+width = 3.0
+default_color = Color(0, 0.8, 1, 1)
+
+[node name="BlockGlow" type="Line2D" parent="."]
+points = PackedVector2Array(-20, -20, 20, -20, 20, 20, -20, 20, -20, -20)
+width = 6.0
+default_color = Color(0, 0.4, 0.8, 0.4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")

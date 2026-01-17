@@ -1,0 +1,1230 @@
+[gd_scene load_steps=9 format=3 uid="uid://main123"]
+
+[ext_resource type="PackedScene" uid="uid://player123" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://spike123" path="res://scenes/spike.tscn" id="2_spike"]
+[ext_resource type="PackedScene" uid="uid://ground123" path="res://scenes/ground_block.tscn" id="3_ground"]
+[ext_resource type="Script" uid="uid://cv215j8jqtre0" path="res://scripts/camera.gd" id="4_camera"]
+[ext_resource type="Script" uid="uid://cgc1ojtobnj5k" path="res://scripts/fps_counter.gd" id="5_fps"]
+[ext_resource type="Script" uid="uid://c23ivuuj2yhk4" path="res://scripts/game_manager.gd" id="6_manager"]
+[ext_resource type="Script" uid="uid://bbo1cd4qkhxy3" path="res://scripts/background_pulse.gd" id="8_bgpulse"]
+[ext_resource type="Script" uid="uid://wcsdmvext8m7" path="res://scripts/attempt_counter.gd" id="9_attempts"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("6_manager")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -10
+script = ExtResource("8_bgpulse")
+
+[node name="BGGradient1" type="ColorRect" parent="BackgroundLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0.02, 0.06, 1)
+
+[node name="BGGradient2" type="ColorRect" parent="BackgroundLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.6
+color = Color(0, 0.04, 0.1, 1)
+
+[node name="BGGradient3" type="ColorRect" parent="BackgroundLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.3
+color = Color(0, 0.08, 0.15, 1)
+
+[node name="BGAccent" type="ColorRect" parent="BackgroundLayer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.08
+color = Color(0, 0.2, 0.4, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(100, 500)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+script = ExtResource("4_camera")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FPSCounter" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0, 1, 0.5, 1)
+theme_override_font_sizes/font_size = 20
+text = "FPS: 0"
+script = ExtResource("5_fps")
+
+[node name="AttemptCounter" type="Label" parent="CanvasLayer"]
+offset_left = 1080.0
+offset_top = 10.0
+offset_right = 1270.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Attempt: 1"
+horizontal_alignment = 2
+script = ExtResource("9_attempts")
+
+[node name="Instructions" type="Label" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 680.0
+offset_right = 500.0
+offset_bottom = 710.0
+theme_override_colors/font_color = Color(0.5, 0.7, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+text = "SPACE/W/UP = Jump | R = Restart | ESC = Pause"
+
+[node name="Ground" type="Node2D" parent="."]
+
+[node name="G1" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(20, 600)
+
+[node name="G2" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(60, 600)
+
+[node name="G3" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(100, 600)
+
+[node name="G4" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(140, 600)
+
+[node name="G5" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(180, 600)
+
+[node name="G6" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(220, 600)
+
+[node name="G7" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(260, 600)
+
+[node name="G8" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(300, 600)
+
+[node name="G9" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(340, 600)
+
+[node name="G10" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(380, 600)
+
+[node name="G11" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(420, 600)
+
+[node name="G12" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(460, 600)
+
+[node name="G13" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(500, 600)
+
+[node name="G14" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(540, 600)
+
+[node name="G15" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(580, 600)
+
+[node name="G16" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(620, 600)
+
+[node name="G17" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(660, 600)
+
+[node name="G18" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(700, 600)
+
+[node name="G19" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(740, 600)
+
+[node name="G20" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(780, 600)
+
+[node name="G21" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(820, 600)
+
+[node name="G22" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(860, 600)
+
+[node name="G23" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(900, 600)
+
+[node name="G24" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(940, 600)
+
+[node name="G25" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(980, 600)
+
+[node name="G26" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1020, 600)
+
+[node name="G27" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1060, 600)
+
+[node name="G28" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1100, 600)
+
+[node name="G29" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1140, 600)
+
+[node name="G30" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1180, 600)
+
+[node name="G31" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1220, 600)
+
+[node name="G32" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1260, 600)
+
+[node name="G33" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1300, 600)
+
+[node name="G34" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1340, 600)
+
+[node name="G35" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1380, 600)
+
+[node name="G36" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1420, 600)
+
+[node name="G37" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1460, 600)
+
+[node name="G38" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1500, 600)
+
+[node name="G39" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1540, 600)
+
+[node name="G40" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1580, 600)
+
+[node name="G41" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1620, 600)
+
+[node name="G42" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1660, 600)
+
+[node name="G43" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1700, 600)
+
+[node name="G44" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1740, 600)
+
+[node name="G45" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1780, 600)
+
+[node name="G46" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1820, 600)
+
+[node name="G47" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1860, 600)
+
+[node name="G48" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1900, 600)
+
+[node name="G49" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1940, 600)
+
+[node name="G50" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(1980, 600)
+
+[node name="G51" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2020, 600)
+
+[node name="G52" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2060, 600)
+
+[node name="G53" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2100, 600)
+
+[node name="G54" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2140, 600)
+
+[node name="G55" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2180, 600)
+
+[node name="G56" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2220, 600)
+
+[node name="G57" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2260, 600)
+
+[node name="G58" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2300, 600)
+
+[node name="G59" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2340, 600)
+
+[node name="G60" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2380, 600)
+
+[node name="G61" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2420, 600)
+
+[node name="G62" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2460, 600)
+
+[node name="G63" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2500, 600)
+
+[node name="G64" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2540, 600)
+
+[node name="G65" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2580, 600)
+
+[node name="G66" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2620, 600)
+
+[node name="G67" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2660, 600)
+
+[node name="G68" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2700, 600)
+
+[node name="G69" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2740, 600)
+
+[node name="G70" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2780, 600)
+
+[node name="G71" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2820, 600)
+
+[node name="G72" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2860, 600)
+
+[node name="G73" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2900, 600)
+
+[node name="G74" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2940, 600)
+
+[node name="G75" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2980, 600)
+
+[node name="G76" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3020, 600)
+
+[node name="G77" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3060, 600)
+
+[node name="G78" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3100, 600)
+
+[node name="G79" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3140, 600)
+
+[node name="G80" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3180, 600)
+
+[node name="G81" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3220, 600)
+
+[node name="G82" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3260, 600)
+
+[node name="G83" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3300, 600)
+
+[node name="G84" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3340, 600)
+
+[node name="G85" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3380, 600)
+
+[node name="G86" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3420, 600)
+
+[node name="G87" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3460, 600)
+
+[node name="G88" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3500, 600)
+
+[node name="G89" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3540, 600)
+
+[node name="G90" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3580, 600)
+
+[node name="G91" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3620, 600)
+
+[node name="G92" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3660, 600)
+
+[node name="G93" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3700, 600)
+
+[node name="G94" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3740, 600)
+
+[node name="G95" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3780, 600)
+
+[node name="G96" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3820, 600)
+
+[node name="G97" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3860, 600)
+
+[node name="G98" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3900, 600)
+
+[node name="G99" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3940, 600)
+
+[node name="G100" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3980, 600)
+
+[node name="G101" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4020, 600)
+
+[node name="G102" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4060, 600)
+
+[node name="G103" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4100, 600)
+
+[node name="G104" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4140, 600)
+
+[node name="G105" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4180, 600)
+
+[node name="G106" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4220, 600)
+
+[node name="G107" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4260, 600)
+
+[node name="G108" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4300, 600)
+
+[node name="G109" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4340, 600)
+
+[node name="G110" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4380, 600)
+
+[node name="G111" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4420, 600)
+
+[node name="G112" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4460, 600)
+
+[node name="G113" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4500, 600)
+
+[node name="G114" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4540, 600)
+
+[node name="G115" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4580, 600)
+
+[node name="G116" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4620, 600)
+
+[node name="G117" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4660, 600)
+
+[node name="G118" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4700, 600)
+
+[node name="G119" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4740, 600)
+
+[node name="G120" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4780, 600)
+
+[node name="G121" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4820, 600)
+
+[node name="G122" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4860, 600)
+
+[node name="G123" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4900, 600)
+
+[node name="G124" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4940, 600)
+
+[node name="G125" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(4980, 600)
+
+[node name="G126" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5020, 600)
+
+[node name="G127" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5060, 600)
+
+[node name="G128" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5100, 600)
+
+[node name="G129" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5140, 600)
+
+[node name="G130" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5180, 600)
+
+[node name="G131" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5220, 600)
+
+[node name="G132" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5260, 600)
+
+[node name="G133" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5300, 600)
+
+[node name="G134" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5340, 600)
+
+[node name="G135" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5380, 600)
+
+[node name="G136" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5420, 600)
+
+[node name="G137" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5460, 600)
+
+[node name="G138" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5500, 600)
+
+[node name="G139" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5540, 600)
+
+[node name="G140" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5580, 600)
+
+[node name="G141" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5620, 600)
+
+[node name="G142" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5660, 600)
+
+[node name="G143" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5700, 600)
+
+[node name="G144" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5740, 600)
+
+[node name="G145" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5780, 600)
+
+[node name="G146" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5820, 600)
+
+[node name="G147" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5860, 600)
+
+[node name="G148" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5900, 600)
+
+[node name="G149" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5940, 600)
+
+[node name="G150" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(5980, 600)
+
+[node name="G151" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6020, 600)
+
+[node name="G152" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6060, 600)
+
+[node name="G153" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6100, 600)
+
+[node name="G154" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6140, 600)
+
+[node name="G155" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6180, 600)
+
+[node name="G156" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6220, 600)
+
+[node name="G157" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6260, 600)
+
+[node name="G158" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6300, 600)
+
+[node name="G159" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6340, 600)
+
+[node name="G160" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6380, 600)
+
+[node name="G161" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6420, 600)
+
+[node name="G162" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6460, 600)
+
+[node name="G163" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6500, 600)
+
+[node name="G164" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6540, 600)
+
+[node name="G165" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6580, 600)
+
+[node name="G166" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6620, 600)
+
+[node name="G167" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6660, 600)
+
+[node name="G168" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6700, 600)
+
+[node name="G169" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6740, 600)
+
+[node name="G170" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6780, 600)
+
+[node name="G171" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6820, 600)
+
+[node name="G172" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6860, 600)
+
+[node name="G173" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6900, 600)
+
+[node name="G174" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6940, 600)
+
+[node name="G175" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(6980, 600)
+
+[node name="G176" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7020, 600)
+
+[node name="G177" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7060, 600)
+
+[node name="G178" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7100, 600)
+
+[node name="G179" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7140, 600)
+
+[node name="G180" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7180, 600)
+
+[node name="G181" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7220, 600)
+
+[node name="G182" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7260, 600)
+
+[node name="G183" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7300, 600)
+
+[node name="G184" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7340, 600)
+
+[node name="G185" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7380, 600)
+
+[node name="G186" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7420, 600)
+
+[node name="G187" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7460, 600)
+
+[node name="G188" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7500, 600)
+
+[node name="G189" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7540, 600)
+
+[node name="G190" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7580, 600)
+
+[node name="G191" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7620, 600)
+
+[node name="G192" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7660, 600)
+
+[node name="G193" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7700, 600)
+
+[node name="G194" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7740, 600)
+
+[node name="G195" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7780, 600)
+
+[node name="G196" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7820, 600)
+
+[node name="G197" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7860, 600)
+
+[node name="G198" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7900, 600)
+
+[node name="G199" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7940, 600)
+
+[node name="G200" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(7980, 600)
+
+[node name="G201" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8020, 600)
+
+[node name="G202" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8060, 600)
+
+[node name="G203" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8100, 600)
+
+[node name="G204" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8140, 600)
+
+[node name="G205" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8180, 600)
+
+[node name="G206" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8220, 600)
+
+[node name="G207" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8260, 600)
+
+[node name="G208" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8300, 600)
+
+[node name="G209" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8340, 600)
+
+[node name="G210" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8380, 600)
+
+[node name="G211" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8420, 600)
+
+[node name="G212" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8460, 600)
+
+[node name="G213" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8500, 600)
+
+[node name="G214" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8540, 600)
+
+[node name="G215" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8580, 600)
+
+[node name="G216" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8620, 600)
+
+[node name="G217" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8660, 600)
+
+[node name="G218" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8700, 600)
+
+[node name="G219" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8740, 600)
+
+[node name="G220" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8780, 600)
+
+[node name="G221" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8820, 600)
+
+[node name="G222" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8860, 600)
+
+[node name="G223" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8900, 600)
+
+[node name="G224" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8940, 600)
+
+[node name="G225" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(8980, 600)
+
+[node name="G226" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9020, 600)
+
+[node name="G227" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9060, 600)
+
+[node name="G228" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9100, 600)
+
+[node name="G229" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9140, 600)
+
+[node name="G230" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9180, 600)
+
+[node name="G231" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9220, 600)
+
+[node name="G232" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9260, 600)
+
+[node name="G233" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9300, 600)
+
+[node name="G234" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9340, 600)
+
+[node name="G235" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9380, 600)
+
+[node name="G236" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9420, 600)
+
+[node name="G237" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9460, 600)
+
+[node name="G238" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9500, 600)
+
+[node name="G239" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9540, 600)
+
+[node name="G240" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9580, 600)
+
+[node name="G241" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9620, 600)
+
+[node name="G242" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9660, 600)
+
+[node name="G243" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9700, 600)
+
+[node name="G244" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9740, 600)
+
+[node name="G245" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9780, 600)
+
+[node name="G246" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9820, 600)
+
+[node name="G247" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9860, 600)
+
+[node name="G248" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9900, 600)
+
+[node name="G249" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9940, 600)
+
+[node name="G250" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(9980, 600)
+
+[node name="G251" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10020, 600)
+
+[node name="G252" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10060, 600)
+
+[node name="G253" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10100, 600)
+
+[node name="G254" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10140, 600)
+
+[node name="G255" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10180, 600)
+
+[node name="G256" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10220, 600)
+
+[node name="G257" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10260, 600)
+
+[node name="G258" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10300, 600)
+
+[node name="G259" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10340, 600)
+
+[node name="G260" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10380, 600)
+
+[node name="G261" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10420, 600)
+
+[node name="G262" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10460, 600)
+
+[node name="G263" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10500, 600)
+
+[node name="G264" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10540, 600)
+
+[node name="G265" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10580, 600)
+
+[node name="G266" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10620, 600)
+
+[node name="G267" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10660, 600)
+
+[node name="G268" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10700, 600)
+
+[node name="G269" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10740, 600)
+
+[node name="G270" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10780, 600)
+
+[node name="G271" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10820, 600)
+
+[node name="G272" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10860, 600)
+
+[node name="G273" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10900, 600)
+
+[node name="G274" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10940, 600)
+
+[node name="G275" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(10980, 600)
+
+[node name="G276" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11020, 600)
+
+[node name="G277" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11060, 600)
+
+[node name="G278" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11100, 600)
+
+[node name="G279" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11140, 600)
+
+[node name="G280" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11180, 600)
+
+[node name="G281" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11220, 600)
+
+[node name="G282" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11260, 600)
+
+[node name="G283" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11300, 600)
+
+[node name="G284" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11340, 600)
+
+[node name="G285" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11380, 600)
+
+[node name="G286" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11420, 600)
+
+[node name="G287" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11460, 600)
+
+[node name="G288" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11500, 600)
+
+[node name="G289" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11540, 600)
+
+[node name="G290" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11580, 600)
+
+[node name="G291" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11620, 600)
+
+[node name="G292" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11660, 600)
+
+[node name="G293" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11700, 600)
+
+[node name="G294" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11740, 600)
+
+[node name="G295" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11780, 600)
+
+[node name="G296" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11820, 600)
+
+[node name="G297" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11860, 600)
+
+[node name="G298" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11900, 600)
+
+[node name="G299" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11940, 600)
+
+[node name="G300" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(11980, 600)
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="S1" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(500, 560)
+
+[node name="S2" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(800, 560)
+
+[node name="B1" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1100, 560)
+
+[node name="S3" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(1300, 560)
+
+[node name="DS1a" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(1600, 560)
+
+[node name="DS1b" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(1640, 560)
+
+[node name="B2a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1900, 560)
+
+[node name="B2b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1940, 560)
+
+[node name="S4" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2200, 560)
+
+[node name="Float1a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2600, 520)
+
+[node name="Float1b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2640, 520)
+
+[node name="Float1c" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2680, 520)
+
+[node name="S5" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2900, 560)
+
+[node name="S6" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(3200, 560)
+
+[node name="Stair1" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(3600, 560)
+
+[node name="Stair2a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(3740, 561)
+
+[node name="Stair2b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(3742, 519)
+
+[node name="Stair3a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(3897, 559)
+
+[node name="Stair3b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(3898, 518)
+
+[node name="Stair3c" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(3898, 476)
+
+[node name="S7" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(3697, 557)
+
+[node name="S8" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(4100, 560)
+
+[node name="S9" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(4300, 560)
+
+[node name="Float2a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(4600, 520)
+
+[node name="Float2b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(4640, 520)
+
+[node name="Float3a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(4784, 480)
+
+[node name="Float3b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(4824, 480)
+
+[node name="S10" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(5300, 560)
+
+[node name="TS1a" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(5600, 560)
+
+[node name="TS1b" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(5640, 560)
+
+[node name="B3" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5900, 560)
+
+[node name="TS2a" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(6100, 560)
+
+[node name="TS2b" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(6140, 560)
+
+[node name="S11" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(6400, 560)
+
+[node name="Tower1a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(6600, 560)
+
+[node name="Tower1b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(6609, 930)
+
+[node name="Tower1c" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(6601, 966)
+
+[node name="Float5a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(6785, 461)
+
+[node name="Float5b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(6828, 461)
+
+[node name="Float5c" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(6872, 459)
+
+[node name="S12" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(6742, 880)
+
+[node name="S13" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(7200, 560)
+
+[node name="Hop1a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7500, 560)
+
+[node name="Hop1b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7540, 560)
+
+[node name="Hop2a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7700, 520)
+
+[node name="Hop2b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7740, 520)
+
+[node name="Hop3a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7900, 560)
+
+[node name="Hop3b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7940, 560)
+
+[node name="S14" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8200, 560)
+
+[node name="S15" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8400, 560)
+
+[node name="DS2a" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8600, 560)
+
+[node name="DS2b" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8640, 560)
+
+[node name="B4a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8900, 560)
+
+[node name="B4b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8940, 560)
+
+[node name="B4c" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8983, 520)
+
+[node name="S16" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(9200, 560)
+
+[node name="Float6a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(9400, 520)
+
+[node name="Float6b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(9440, 520)
+
+[node name="S17" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(9700, 560)
+
+[node name="S18" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(9900, 560)
+
+[node name="S19" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(9940, 560)
+
+[node name="B5" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(10200, 560)
+
+[node name="S20" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(10400, 560)
+
+[node name="Float7a" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(10600, 520)
+
+[node name="Float7b" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(10640, 520)
+
+[node name="Float7c" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(10680, 520)
+
+[node name="S21" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(10900, 560)
+
+[node name="DS3a" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(11100, 560)
+
+[node name="DS3b" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(11140, 560)
+
+[node name="B6" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(11400, 560)
+
+[node name="S22" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(11600, 560)
+
+[node name="S23" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(11800, 560)
+
+[node name="S12" parent="." instance=ExtResource("2_spike")]
+position = Vector2(6872, 503)
+rotation = -3.1415927
+
+[node name="S12" parent="S12" instance=ExtResource("2_spike")]
+position = Vector2(359.00003, -447.99997)
+rotation = -3.1415927
+
+[node name="S13" parent="." instance=ExtResource("2_spike")]
+position = Vector2(6785, 502)
+rotation = -3.1415927
+
+[node name="S12" parent="S13" instance=ExtResource("2_spike")]
+position = Vector2(-42, -2)
+
+[node name="Stair2b" parent="." instance=ExtResource("3_ground")]
+position = Vector2(3780, 519)
+
+[node name="S9" parent="." instance=ExtResource("2_spike")]
+position = Vector2(4782, 558)
+
+[node name="S9" parent="S9" instance=ExtResource("2_spike")]
+position = Vector2(-41, 1)
+
+[node name="S9" parent="S9/S9" instance=ExtResource("2_spike")]
+position = Vector2(86, -4)
+
+[node name="S9" parent="S9/S9/S9" instance=ExtResource("2_spike")]
+position = Vector2(-127, 3)

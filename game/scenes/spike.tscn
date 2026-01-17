@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://spike123"]
+
+[ext_resource type="Script" path="res://scripts/spike.gd" id="1_spike"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_1"]
+points = PackedVector2Array(-18, 18, 0, -18, 18, 18)
+
+[node name="Spike" type="Area2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_spike")
+
+[node name="SpikeBody" type="Polygon2D" parent="."]
+color = Color(0.05, 0.1, 0.2, 1)
+polygon = PackedVector2Array(-20, 20, 0, -20, 20, 20)
+
+[node name="SpikeOutline" type="Line2D" parent="."]
+points = PackedVector2Array(-20, 20, 0, -20, 20, 20, -20, 20)
+width = 3.0
+default_color = Color(0, 0.8, 1, 1)
+
+[node name="SpikeGlow" type="Line2D" parent="."]
+points = PackedVector2Array(-20, 20, 0, -20, 20, 20, -20, 20)
+width = 6.0
+default_color = Color(0, 0.4, 0.8, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
