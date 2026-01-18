@@ -26,6 +26,8 @@ color = Color(0, 0.02, 0.06, 1)
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.6
+offset_left = -2.0
+offset_right = -2.0
 color = Color(0, 0.04, 0.1, 1)
 
 [node name="BGGradient3" type="ColorRect" parent="BackgroundLayer"]
@@ -41,7 +43,7 @@ anchor_bottom = 0.08
 color = Color(0, 0.2, 0.4, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
-position = Vector2(100, 500)
+position = Vector2(100, 561)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 360)
@@ -124,7 +126,7 @@ position = Vector2(500, 600)
 position = Vector2(540, 600)
 
 [node name="G15" parent="Ground" instance=ExtResource("3_ground")]
-position = Vector2(580, 600)
+position = Vector2(581, 600)
 
 [node name="G16" parent="Ground" instance=ExtResource("3_ground")]
 position = Vector2(620, 600)
@@ -259,16 +261,16 @@ position = Vector2(2300, 600)
 position = Vector2(2340, 600)
 
 [node name="G60" parent="Ground" instance=ExtResource("3_ground")]
-position = Vector2(2380, 600)
+position = Vector2(2384, 642)
 
 [node name="G61" parent="Ground" instance=ExtResource("3_ground")]
-position = Vector2(2420, 600)
+position = Vector2(2426, 644)
 
 [node name="G62" parent="Ground" instance=ExtResource("3_ground")]
-position = Vector2(2460, 600)
+position = Vector2(2467, 642)
 
 [node name="G63" parent="Ground" instance=ExtResource("3_ground")]
-position = Vector2(2500, 600)
+position = Vector2(2509, 641)
 
 [node name="G64" parent="Ground" instance=ExtResource("3_ground")]
 position = Vector2(2540, 600)
@@ -981,10 +983,28 @@ position = Vector2(11940, 600)
 [node name="G300" parent="Ground" instance=ExtResource("3_ground")]
 position = Vector2(11980, 600)
 
+[node name="G301" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2897, 556)
+
+[node name="G302" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2980, 600)
+
+[node name="G303" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(2980, 600)
+
+[node name="G304" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3084, 493)
+
+[node name="G305" parent="Ground" instance=ExtResource("3_ground")]
+position = Vector2(3087, 449)
+
 [node name="Obstacles" type="Node2D" parent="."]
 
 [node name="S1" parent="Obstacles" instance=ExtResource("2_spike")]
 position = Vector2(500, 560)
+
+[node name="B2" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1260, 559)
 
 [node name="S2" parent="Obstacles" instance=ExtResource("2_spike")]
 position = Vector2(800, 560)
@@ -993,13 +1013,13 @@ position = Vector2(800, 560)
 position = Vector2(1100, 560)
 
 [node name="S3" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(1300, 560)
+position = Vector2(1979, 555)
 
 [node name="DS1a" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(1600, 560)
+position = Vector2(1859, 558)
 
 [node name="DS1b" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(1640, 560)
+position = Vector2(1822, 559)
 
 [node name="B2a" parent="Obstacles" instance=ExtResource("3_ground")]
 position = Vector2(1900, 560)
@@ -1008,22 +1028,24 @@ position = Vector2(1900, 560)
 position = Vector2(1940, 560)
 
 [node name="S4" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(2200, 560)
+position = Vector2(2022, 558)
 
 [node name="Float1a" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(2600, 520)
+position = Vector2(2184, 475)
 
 [node name="Float1b" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(2640, 520)
+position = Vector2(2228, 475)
 
 [node name="Float1c" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(2680, 520)
+position = Vector2(2271, 476)
 
 [node name="S5" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(2900, 560)
+position = Vector2(3040, 454)
+rotation = -1.5707964
 
 [node name="S6" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(3200, 560)
+position = Vector2(3038, 496)
+rotation = -1.5707964
 
 [node name="Stair1" parent="Obstacles" instance=ExtResource("3_ground")]
 position = Vector2(3600, 560)
@@ -1065,16 +1087,17 @@ position = Vector2(4784, 480)
 position = Vector2(4824, 480)
 
 [node name="S10" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(5300, 560)
+position = Vector2(5459, 423)
+rotation = 3.1415927
 
 [node name="TS1a" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(5600, 560)
+position = Vector2(5653, 559)
 
 [node name="TS1b" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(5640, 560)
+position = Vector2(5697, 557)
 
 [node name="B3" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(5900, 560)
+position = Vector2(6059, 558)
 
 [node name="TS2a" parent="Obstacles" instance=ExtResource("2_spike")]
 position = Vector2(6100, 560)
@@ -1089,10 +1112,10 @@ position = Vector2(6400, 560)
 position = Vector2(6600, 560)
 
 [node name="Tower1b" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(6609, 930)
+position = Vector2(1258, 517)
 
 [node name="Tower1c" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(6601, 966)
+position = Vector2(1418, 557)
 
 [node name="Float5a" parent="Obstacles" instance=ExtResource("3_ground")]
 position = Vector2(6785, 461)
@@ -1104,10 +1127,11 @@ position = Vector2(6828, 461)
 position = Vector2(6872, 459)
 
 [node name="S12" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(6742, 880)
+position = Vector2(2155, 1417)
 
 [node name="S13" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(7200, 560)
+position = Vector2(7696, 393)
+rotation = 3.1415927
 
 [node name="Hop1a" parent="Obstacles" instance=ExtResource("3_ground")]
 position = Vector2(7500, 560)
@@ -1119,19 +1143,16 @@ position = Vector2(7540, 560)
 position = Vector2(7700, 520)
 
 [node name="Hop2b" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(7740, 520)
+position = Vector2(7742, 520)
 
 [node name="Hop3a" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(7900, 560)
+position = Vector2(7894, 560)
 
 [node name="Hop3b" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(7940, 560)
-
-[node name="S14" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(8200, 560)
+position = Vector2(8022, 556)
 
 [node name="S15" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(8400, 560)
+position = Vector2(8372, 554)
 
 [node name="DS2a" parent="Obstacles" instance=ExtResource("2_spike")]
 position = Vector2(8600, 560)
@@ -1145,11 +1166,8 @@ position = Vector2(8900, 560)
 [node name="B4b" parent="Obstacles" instance=ExtResource("3_ground")]
 position = Vector2(8940, 560)
 
-[node name="B4c" parent="Obstacles" instance=ExtResource("3_ground")]
-position = Vector2(8983, 520)
-
 [node name="S16" parent="Obstacles" instance=ExtResource("2_spike")]
-position = Vector2(9200, 560)
+position = Vector2(9396, 560)
 
 [node name="Float6a" parent="Obstacles" instance=ExtResource("3_ground")]
 position = Vector2(9400, 520)
@@ -1199,12 +1217,221 @@ position = Vector2(11600, 560)
 [node name="S23" parent="Obstacles" instance=ExtResource("2_spike")]
 position = Vector2(11800, 560)
 
+[node name="B4" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1577, 431)
+
+[node name="B7" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1577, 474)
+
+[node name="B8" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1453, 1303)
+
+[node name="B9" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1540, 1319)
+
+[node name="B10" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1416, 471)
+
+[node name="B11" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1416, 513)
+
+[node name="B12" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1100, 560)
+
+[node name="Float1c2" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2271, 476)
+
+[node name="Float1c3" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2271, 476)
+
+[node name="Float1c4" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2271, 476)
+
+[node name="Float1c5" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2271, 476)
+
+[node name="Float1c6" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2271, 476)
+
+[node name="Float1c7" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2271, 476)
+
+[node name="Float1c8" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2271, 476)
+
+[node name="Float1c9" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2435, 475)
+
+[node name="Float1c10" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2395, 475)
+
+[node name="Float1c11" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2353, 476)
+
+[node name="Float1c12" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(2313, 476)
+
+[node name="S24" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2397, 518)
+rotation = 3.1415927
+
+[node name="S25" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2358, 516)
+rotation = 3.1415927
+
+[node name="S26" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2311, 517)
+rotation = 3.1415927
+
+[node name="S27" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2271, 516)
+rotation = 3.1415927
+
+[node name="S28" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2225, 518)
+rotation = 3.1415927
+
+[node name="S29" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2183, 518)
+rotation = 3.1415927
+
+[node name="S30" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(2439, 519)
+rotation = 3.1415927
+
+[node name="B13" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(6021, 558)
+
+[node name="B14" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5985, 558)
+
+[node name="B15" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5941, 556)
+
+[node name="B16" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5899, 1288)
+
+[node name="B17" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5900, 555)
+
+[node name="B18" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5900, 373)
+
+[node name="B19" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5460, 378)
+
+[node name="B20" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(5459, 559)
+
+[node name="S31" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(7696, 392)
+rotation = 3.1415927
+
+[node name="S32" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(7782, 391)
+rotation = 3.1415927
+
+[node name="S33" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(7738, 392)
+rotation = 3.1415927
+
+[node name="Hop1b2" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8180, 519)
+
+[node name="Hop1b3" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8180, 559)
+
+[node name="Hop1b4" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8024, 515)
+
+[node name="Hop1b5" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7778, 348)
+
+[node name="Hop1b6" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7736, 348)
+
+[node name="Hop1b7" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7696, 349)
+
+[node name="Hop1b8" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7782, 520)
+
+[node name="Hop1b9" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7540, 560)
+
+[node name="Hop1b10" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7540, 560)
+
+[node name="Hop1b11" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7540, 560)
+
+[node name="Hop1b12" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8328, 427)
+
+[node name="Hop1b13" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8259, 1318)
+
+[node name="Hop1b14" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8327, 559)
+
+[node name="Hop1b15" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8181, 479)
+
+[node name="Hop1b16" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(7540, 560)
+
+[node name="S14" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(5900, 417)
+rotation = 3.1415927
+
+[node name="S34" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(5459, 423)
+rotation = 3.1415927
+
+[node name="B21" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1580, 556)
+
+[node name="B22" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(1577, 514)
+
+[node name="DS2a2" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(9020, 557)
+
+[node name="DS2a3" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8327, 336)
+rotation = -1.5707964
+
+[node name="DS2a4" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8326, 381)
+rotation = -1.5707964
+
+[node name="Hop1b17" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8327, 559)
+
+[node name="Hop1b18" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8371, 336)
+
+[node name="Hop1b19" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8372, 379)
+
+[node name="Hop1b20" parent="Obstacles" instance=ExtResource("3_ground")]
+position = Vector2(8374, 427)
+
+[node name="DS2b2" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8977, 556)
+
+[node name="DS2b3" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(8817, 557)
+
+[node name="DS2b4" parent="Obstacles" instance=ExtResource("2_spike")]
+position = Vector2(9447, 556)
+
 [node name="S12" parent="." instance=ExtResource("2_spike")]
 position = Vector2(6872, 503)
 rotation = -3.1415927
 
 [node name="S12" parent="S12" instance=ExtResource("2_spike")]
-position = Vector2(359.00003, -447.99997)
+position = Vector2(4727, -917.9996)
 rotation = -3.1415927
 
 [node name="S13" parent="." instance=ExtResource("2_spike")]
@@ -1228,3 +1455,6 @@ position = Vector2(86, -4)
 
 [node name="S9" parent="S9/S9/S9" instance=ExtResource("2_spike")]
 position = Vector2(-127, 3)
+
+[node name="DS2b" parent="." instance=ExtResource("2_spike")]
+position = Vector2(8855, 557)
