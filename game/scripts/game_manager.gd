@@ -26,6 +26,7 @@ func _start_player():
 func _on_level_selected(level_id: int):
 	if Globals:
 		Globals.has_started_once = true
+		Globals.current_level = level_id  # Save which level is selected
 	
 	# Load the appropriate level
 	var level_scene_path = ""
