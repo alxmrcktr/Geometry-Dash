@@ -11,8 +11,8 @@ func _ready():
 	music_player.bus = "Master"
 
 func play_music(track_name: String, loop: bool = true):
-	if current_track == track_name and music_player.playing:
-		return
+	# Always stop current music first to restart from beginning
+	stop_music()
 	
 	var track_path = "res://music/" + track_name
 	if ResourceLoader.exists(track_path):
