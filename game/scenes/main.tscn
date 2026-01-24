@@ -42,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 0.08
 color = Color(0, 0.2, 0.4, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_player")]
+[node name="Player" parent="BackgroundLayer/BGAccent" instance=ExtResource("1_player")]
 position = Vector2(100, 561)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -267,10 +267,10 @@ position = Vector2(2384, 642)
 position = Vector2(2426, 644)
 
 [node name="G62" parent="Ground" instance=ExtResource("3_ground")]
-position = Vector2(2467, 642)
+position = Vector2(2463, 643)
 
 [node name="G63" parent="Ground" instance=ExtResource("3_ground")]
-position = Vector2(2509, 641)
+position = Vector2(2506, 642)
 
 [node name="G64" parent="Ground" instance=ExtResource("3_ground")]
 position = Vector2(2540, 600)
