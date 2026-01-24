@@ -24,12 +24,31 @@ func _start_player():
 		player.start_game()
 
 func _on_level_selected(level_id: int):
-	# For now we only have level 1
-	if level_id == 1:
-		if Globals:
-			Globals.has_started_once = true
-		game_active = true
-		_start_player()
+	if Globals:
+		Globals.has_started_once = true
+	
+	# Load the appropriate level
+	var level_scene_path = ""
+	var music_track = ""
+	
+	match level_id:
+		1:
+			level_scene_path = "res://scenes/level_1.tscn"
+			music_track = "track1.mp3"
+		2:
+			level_scene_path = "res://scenes/level_2.tscn"
+			music_track = "track2.mp3"
+		_:
+			# Default to level 1
+			level_scene_path = "res://scenes/level_1.tscn"
+			music_track = "track1.mp3"
+	
+	# Load the new level scene
+	if level_scene_path != "":
+		get_tree().change_scene_to_file(level_scene_path)
+		# Start music
+		if AudioManager:
+			AudioManager.call_deferred("play_music", music_track)
 
 func _input(event):
 	# ESC to pause/unpause

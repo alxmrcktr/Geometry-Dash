@@ -128,5 +128,10 @@ func spawn_victory_particles():
 		tween.tween_property(particle, "rotation", randf_range(-5, 5), 0.8)
 		tween.chain().tween_callback(particle.queue_free)
 
+func launch(launch_velocity: float):
+	if is_dead or is_complete:
+		return
+	velocity.y = launch_velocity
+
 func _on_hit_obstacle():
 	die()

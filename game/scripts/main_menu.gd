@@ -35,8 +35,8 @@ func _on_level1_pressed():
 	start_level()
 
 func _on_level2_pressed():
-	# Coming soon - do nothing or show message
-	pass
+	selected_level = 2
+	start_level()
 
 func _on_level3_pressed():
 	# Coming soon
