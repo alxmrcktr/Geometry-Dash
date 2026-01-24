@@ -10,20 +10,22 @@ func _ready():
 	add_child(music_player)
 	music_player.bus = "Master"
 
-func play_music(track_name: String, loop: bool = true):
-	# Always stop current music first to restart from beginning
-	stop_music()
-	
+func play_music(track_name: String, _loop: bool = true):
 	var track_path = "res://music/" + track_name
+	
+	# Stop and reset to ensure full restart
+	if music_player.playing:
+		music_player.stop()
+	
 	if ResourceLoader.exists(track_path):
 		var stream = load(track_path)
 		if stream:
 			music_player.stream = stream
 			music_player.play()
 			current_track = track_name
-			print("Playing music: " + track_name)
+			print("AudioManager: Playing " + track_name)
 	else:
-		print("Music file not found: " + track_path)
+		print("AudioManager: Track not found: " + track_path)
 
 func stop_music():
 	music_player.stop()

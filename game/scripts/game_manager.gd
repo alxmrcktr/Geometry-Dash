@@ -6,11 +6,24 @@ var is_paused = false
 @onready var pause_menu: CanvasLayer = null
 
 func _ready():
+	print("GameManager: Level Ready. Current Level: ", Globals.current_level if Globals else 1)
+	
+	# Fix gray screen: Ensure camera is enabled
+	var camera = get_node_or_null("Camera2D")
+	if camera:
+		camera.enabled = true
+		camera.make_current()
+
 	# Check if player has already started once - skip menu
 	if Globals and Globals.has_started_once:
 		# Skip menu, start immediately
 		game_active = true
-		call_deferred("_start_player")
+		_start_player()
+		
+		# Auto-restart music from 0:00 on death/load
+		if AudioManager:
+			var track = "track" + str(Globals.current_level) + ".mp3"
+			AudioManager.call_deferred("play_music", track)
 	else:
 		# Show main menu with level selection
 		var main_menu = preload("res://scenes/main_menu.tscn")
@@ -46,6 +59,7 @@ func _on_level_selected(level_id: int):
 	
 	# Load the new level scene
 	if level_scene_path != "":
+		print("GameManager: Transitioning to ", level_scene_path)
 		get_tree().change_scene_to_file(level_scene_path)
 		# Start music
 		if AudioManager:
