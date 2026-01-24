@@ -23,8 +23,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color(0, 0.02, 0.06, 1)
 
-[node name="YellowPad" parent="BackgroundLayer/BGGradient1" instance=ExtResource("3_6cvei")]
-position = Vector2(327, 571)
+[node name="YellowPad1" parent="." instance=ExtResource("3_6cvei")]
+position = Vector2(800, 575)
+
+[node name="YellowPad2" parent="." instance=ExtResource("3_6cvei")]
+position = Vector2(2500, 575)
 
 [node name="BGGradient2" type="ColorRect" parent="BackgroundLayer"]
 anchors_preset = -1
